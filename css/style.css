@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --celeste: #A2D2FF;
+    --crema: #FEF9EF;
+    --rosa: #EA047E;
+    --nude: #FFE7CC;
+    --color-footer: #ea51a2;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* header */
+.header_navbar,
+.header_encabezado,
+.section-categorias{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5rem;
+}
+
+.header_navbar{
+    background-color: var(--celeste);
+}
+
+.header_navbar img{
+    width: 20rem;
+}
+
+.header_navbar nav a{
+    font-size: 1.7rem;
+    padding: 0.7rem;
+    margin-left: 1rem;
+    background-color: var(--crema);
+    border-radius: 0.6rem;
+}
+
+.header_navbar nav a:hover{
+    background-color: var(--rosa);
+    color: var(--crema);
+}
+
+.header_encabezado{
+    background-color: var(--nude);
+    color: var(--rosa);
+}
+
+.header_encabezado span,
+.header_encabezado h1{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+/* main home, upcoming and past events*/
+main{
+    margin: 3rem 0;
+}
+
+.section-categorias{
+    font-size: 1.4rem;
+}
+
+.section-categorias label{
+    margin-right: 1rem;
+}
+
+.section-cards{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section-cards_evento{
+    width: 25vw;
+    text-align: center;
+    border-radius: 2rem;
+    border: 0.3rem solid var(--celeste);
+    background-color: var(--crema);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+}
+
+.section-cards_evento img{
+    border-radius: 1.6rem;
+    width: 90%;
+    height: 22vh;
+}
+
+.section-cards_evento h2,
+.section-details_articulo h2{
+    color: var(--rosa);
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.section-cards_evento span{
+    font-weight: 600;
+}
+
+.section-cards_evento button{
+    margin-left: 2rem;
+    border-radius: 0.6rem;
+    padding: 0.4rem;
+    background-color: var(--nude);
+}
+
+/* main contact */
+main form{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin: auto;
+    font-size: 1.5rem;
+}
+
+main form label{
+    font-weight: 600;
+    color: var(--rosa);
+}
+
+main form input{
+    margin: 0.2rem 0 2rem;
+    padding: 0.4rem;
+}
+
+main form textarea{
+    padding: 0.4rem;
+}
+
+main form button{
+    width: 15%;
+    margin-top: 2rem;
+    align-self: flex-end;
+    border-radius: 0.4rem;
+    padding: 0.6rem;
+    background-color: var(--crema);
+    border: 0.2rem solid var(--celeste);
+}
+
+main form button:hover{
+    background-color: var(--celeste);
+    border: 0.2rem solid var(--crema);
+}
+
+/* main stats */
+main table{
+    width: 80%;
+    margin: auto;
+    background-color: var(--crema);
+    border-collapse:separate;
+}
+
+th{
+    background-color: var(--nude);
+}
+
+tr, th, td{
+    border: 0.2rem solid var(--celeste);
+    padding: 0.4rem;
+}
+
+table tr:nth-child(2) td,
+table tr:nth-child(5) td,
+table tr:nth-child(10) td{
+    font-style: italic;
+}
+
+/* main details */
+.section-details_articulo{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.section-details_articulo *{
+    width: 30vw;
+}
+
+.section-details_articulo img{
+    border-radius: 0.6rem;
+    height: 30vh;
+}
+
+.section-details_articulo div{
+    margin-left: 3rem;
+    border: 0.2rem solid var(--rosa);
+    background-color: var(--crema);
+    border-radius: 0.6rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.section-details_articulo p{
+    font-size: 1.8rem;
+}
+
+/* footer */
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 5rem;
+    background-color: var(--color-footer);
+    color: var(--crema);
+}
+
+footer i{
+    margin-right: 1rem;
+}
+
+footer p{
+    font-size: 1.8rem;
+}
