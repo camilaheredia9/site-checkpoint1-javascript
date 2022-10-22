@@ -21,6 +21,7 @@ html{
 
 body{
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 a{
@@ -42,8 +43,29 @@ a{
     background-color: var(--celeste);
 }
 
+.header_navbar nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
 .header_navbar img{
     width: 20rem;
+}
+
+@media (max-width: 992px) {
+    header .row>*{
+        margin-top: 0;
+    }
+
+    .header_navbar div{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .header_navbar nav{
+        justify-content: center;
+    }
 }
 
 .header_navbar nav a{
@@ -71,12 +93,16 @@ a{
 }
 
 /* main home, upcoming and past events*/
-main{
-    margin: 3rem 0;
-}
 
 .section-categorias{
     font-size: 1.4rem;
+    padding: 0 5rem;
+    margin: 3rem 0 2rem;
+}
+
+.section-categorias div:last-of-type{
+    display: flex;
+    justify-content: flex-end;
 }
 
 .section-categorias label{
@@ -91,13 +117,13 @@ main{
 }
 
 .section-cards_evento{
-    width: 25vw;
+    /* width: 25vw; */
     text-align: center;
     border-radius: 2rem;
     border: 0.3rem solid var(--celeste);
     background-color: var(--crema);
     padding: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem;
     font-size: 1.6rem;
 }
 
@@ -130,9 +156,13 @@ main{
 main form{
     display: flex;
     flex-direction: column;
-    width: 35%;
-    margin: auto;
+    margin: 0 auto 20vh;
     font-size: 1.5rem;
+}
+
+.row form,
+.row table{
+    margin-top: 5rem;
 }
 
 main form label{
@@ -150,7 +180,6 @@ main form textarea{
 }
 
 main form button{
-    width: 15%;
     margin-top: 2rem;
     align-self: flex-end;
     border-radius: 0.4rem;
@@ -166,8 +195,7 @@ main form button:hover{
 
 /* main stats */
 main table{
-    width: 80%;
-    margin: auto;
+    margin: 5rem auto 20vh;
     background-color: var(--crema);
     border-collapse:separate;
 }
@@ -189,27 +217,20 @@ table tr:nth-child(10) td{
 
 /* main details */
 .section-details_articulo{
-    width: 80%;
-    margin: auto;
+    margin: 0 auto 20vh;
     display: flex;
     justify-content: center;
 }
 
-.section-details_articulo *{
-    width: 30vw;
-}
-
 .section-details_articulo img{
     border-radius: 0.6rem;
-    height: 30vh;
 }
 
 .section-details_articulo div{
     margin-left: 3rem;
     border: 0.2rem solid var(--rosa);
     background-color: var(--crema);
-    border-radius: 0.6rem;
-    padding: 1rem;
+    padding: 1rem 2rem;
     text-align: center;
 }
 
@@ -219,12 +240,18 @@ table tr:nth-child(10) td{
 
 /* footer */
 footer{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 3rem 5rem;
     background-color: var(--color-footer);
     color: var(--crema);
+}
+
+.footer-fixed{
+    position: fixed;
+    bottom: 0;
 }
 
 footer i{
