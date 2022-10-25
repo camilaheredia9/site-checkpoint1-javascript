@@ -43,6 +43,10 @@ a{
     background-color: var(--celeste);
 }
 
+.header_navbar *{
+    width: fit-content;
+}
+
 .header_navbar nav{
     display: flex;
     justify-content: flex-end;
@@ -55,6 +59,7 @@ a{
 @media (max-width: 992px) {
     header .row>*{
         margin-top: 0;
+        width: 100%;
     }
 
     .header_navbar div{
@@ -74,6 +79,7 @@ a{
     margin-left: 1rem;
     background-color: var(--crema);
     border-radius: 0.6rem;
+    text-align: center;
 }
 
 .header_navbar nav a:hover{
@@ -100,13 +106,45 @@ a{
     margin: 3rem 0 2rem;
 }
 
-.section-categorias div:last-of-type{
+.box-categorias div{
+    display: inline-block;
+}
+
+.buscador{
     display: flex;
     justify-content: flex-end;
 }
 
 .section-categorias label{
-    margin-right: 1rem;
+    margin: 0 1rem 0.4rem 0;
+}
+
+.section-categorias *{
+    width: fit-content;
+}
+
+@media (max-width: 650px) {
+    .header_navbar nav a{
+        font-size: 1.4rem;
+        margin-left: 0.6rem;
+    }
+
+    .section-cards_evento{
+        width: 60%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 800px){
+    .section-categorias{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buscador{
+        margin-top: 1.5rem;
+    }
 }
 
 .section-cards{
@@ -117,7 +155,6 @@ a{
 }
 
 .section-cards_evento{
-    /* width: 25vw; */
     text-align: center;
     border-radius: 2rem;
     border: 0.3rem solid var(--celeste);
@@ -156,7 +193,7 @@ a{
 main form{
     display: flex;
     flex-direction: column;
-    margin: 0 auto 20vh;
+    margin: 5rem auto;
     font-size: 1.5rem;
 }
 
@@ -195,7 +232,7 @@ main form button:hover{
 
 /* main stats */
 main table{
-    margin: 5rem auto 20vh;
+    margin: 5rem auto;
     background-color: var(--crema);
     border-collapse:separate;
 }
@@ -217,7 +254,7 @@ table tr:nth-child(10) td{
 
 /* main details */
 .section-details_articulo{
-    margin: 0 auto 20vh;
+    margin: auto;
     display: flex;
     justify-content: center;
 }
@@ -249,9 +286,11 @@ footer{
     color: var(--crema);
 }
 
-.footer-fixed{
-    position: fixed;
-    bottom: 0;
+@media (min-width: 1000px){
+    .footer-fixed{
+        position: fixed;
+        bottom: 0;
+    }
 }
 
 footer i{
