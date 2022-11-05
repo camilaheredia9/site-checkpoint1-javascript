@@ -99,28 +99,49 @@ a{
 }
 
 /* main home, upcoming and past events*/
-
 .section-categorias{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 1.4rem;
     padding: 0 5rem;
     margin: 3rem 0 2rem;
+}
+
+.box-categorias{
+    width: fit-content;
 }
 
 .box-categorias div{
     display: inline-block;
 }
 
-.buscador{
-    display: flex;
-    justify-content: flex-end;
-}
-
 .section-categorias label{
     margin: 0 1rem 0.4rem 0;
 }
 
-.section-categorias *{
-    width: fit-content;
+.d-flex{
+    width: 30%;
+}
+
+.d-flex *{
+    font-size: 1.2rem;
+}
+
+.form-control{
+    line-height: 2.5;
+}
+
+.d-flex .btn{
+    font-weight: 600;
+    background-color: var(--celeste);
+    color: var(--crema);
+}
+
+.d-flex .btn:hover{
+    color: var(--crema);
+    background-color: var(--rosa);
+    border: 0.1rem solid var(--crema);
 }
 
 @media (max-width: 650px) {
@@ -178,45 +199,56 @@ a{
     margin: 1rem 0;
 }
 
+.section-cards_evento p{
+    height: 8vh;
+    overflow-y: scroll;
+}
+
+.section-cards_evento div:last-of-type{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .section-cards_evento span{
     font-weight: 600;
 }
 
-.section-cards_evento button{
-    margin-left: 2rem;
+.section-cards_evento div:last-of-type a{
+    border: 0.1rem solid var(--rosa);
     border-radius: 0.6rem;
-    padding: 0.4rem;
+    padding: 0.6rem;
     background-color: var(--nude);
 }
 
 /* main contact */
-main form{
+.formulario-contacto{
     display: flex;
     flex-direction: column;
     margin: 5rem auto;
     font-size: 1.5rem;
 }
 
-.row form,
+.formulario-contacto,
 .row table{
     margin-top: 5rem;
 }
 
-main form label{
+.formulario-contacto label{
     font-weight: 600;
     color: var(--rosa);
 }
 
-main form input{
+.formulario-contacto input{
     margin: 0.2rem 0 2rem;
     padding: 0.4rem;
 }
 
-main form textarea{
+.formulario-contacto textarea{
     padding: 0.4rem;
 }
 
-main form button{
+.formulario-contacto button{
     margin-top: 2rem;
     align-self: flex-end;
     border-radius: 0.4rem;
@@ -225,7 +257,7 @@ main form button{
     border: 0.2rem solid var(--celeste);
 }
 
-main form button:hover{
+.formulario-contacto button:hover{
     background-color: var(--celeste);
     border: 0.2rem solid var(--crema);
 }

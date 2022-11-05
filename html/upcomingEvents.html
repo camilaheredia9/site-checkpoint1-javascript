@@ -27,7 +27,7 @@
 
         <div class="header_encabezado">
             <span> < </span>
-            <h1>Home</h1>
+            <h1>Upcoming Events</h1>
             <span> > </span>
         </div>
     </header>
@@ -57,48 +57,13 @@
                     <label for="">Category</label>
                 </div>
             </div>
-            <div class="buscador">
-                <input id="" type="text">
-                <button>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </div>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn" type="submit">Search</button>
+            </form>
         </section>
 
-        <section class="section-cards row">
-            <article class="section-cards_evento col-lg-3 col-md-5 col-sm-7">
-                <div>
-                    <img src="../imgs/Fiesta-de-disfraces1.jpg" alt="Evento de cine">
-                </div>
-                <h2>Título</h2>
-                <p>Título descriptivo</p>
-                <div>
-                    <span>Price $1000</span>
-                    <button><a href="./details.html">See more...</a></button>
-                </div>
-            </article>
-            <article class="section-cards_evento col-lg-3 col-md-5 col-sm-7">
-                <div>
-                    <img src="../imgs/Maraton3.jpg" alt="Evento de cine">
-                </div>
-                <h2>Título</h2>
-                <p>Título descriptivo</p>
-                <div>
-                    <span>Price $1000</span>
-                    <button><a href="./details.html">See more...</a></button>
-                </div>
-            </article>
-            <article class="section-cards_evento col-lg-3 col-md-5 col-sm-7">
-                <div>
-                    <img src="../imgs/Salida-al-museo5.jpg" alt="Evento de cine">
-                </div>
-                <h2>Título</h2>
-                <p>Título descriptivo</p>
-                <div>
-                    <span>Price $1000</span>
-                    <button><a href="./details.html">See more...</a></button>
-                </div>
-            </article>
+        <section id="sectionCards-upcoming" class="section-cards row">
         </section>
     </main>
 
@@ -111,4 +76,5 @@
         <p>Cohort</p>
     </footer>
 </body>
+<script src="../js/script.js"></script>
 </html>
