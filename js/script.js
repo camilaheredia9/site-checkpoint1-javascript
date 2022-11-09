@@ -212,3 +212,23 @@ if (currentURL == "home.html") {
 } else if (currentURL == "upcomingEvents.html") {
     paintCards(upcomingEvents, document.getElementById("sectionCards-upcoming"));
 }  
+
+/*
+                <p>
+                   ${event.description.slice(0, 55)}...
+                   <button id="readMore-btn">Continue reading</button>
+                </p>
+                <span class="textToShow none">${event.description.slice(56, event.description.length - 1)}</span>
+// MOSTRAR EL RESTO DE LA DESCRIPCIÓN DEL EVENTO
+const btnReadMore = document.getElementById("readMore-btn");
+const textToShow = document.getElementById("textToShow");
+
+btnReadMore.addEventListener( 'click', function toggleText(){
+    if (btnReadMore.innerText == 'Continue reading'){
+        textToShow.style.display = "inline-block"; // <-----
+    } else {
+        btnReadMore.innerText= 'Read less';
+        textToShow.style.display = "none";
+    }
+})
+*/

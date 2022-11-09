@@ -144,6 +144,12 @@ a{
     border: 0.1rem solid var(--crema);
 }
 
+@media (max-width: 800px){
+    .d-flex{
+        width: 80%;
+    }
+}
+
 @media (max-width: 650px) {
     .header_navbar nav a{
         font-size: 1.4rem;
@@ -200,8 +206,9 @@ a{
 }
 
 .section-cards_evento p{
-    height: 8vh;
-    overflow-y: scroll;
+    height: 10vh;
+    display: flex;
+    align-items: center;
 }
 
 .section-cards_evento div:last-of-type{
@@ -332,3 +339,20 @@ footer i{
 footer p{
     font-size: 1.8rem;
 }
+
+/* 
+************* CONTINUAR LEYENDO...*************
+.section-cards_evento p{
+    margin: 1.6rem 0;
+}
+
+.section-cards_evento p button{
+    border: none;
+    font-style: italic;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.textToShow{
+    display: none;
+}    
