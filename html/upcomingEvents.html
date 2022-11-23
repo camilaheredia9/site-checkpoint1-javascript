@@ -32,38 +32,20 @@
         </div>
     </header>
 
-
     <main>
         <section class="section-categorias row">
-            <div class="box-categorias">
-                <div>
-                    <input id="" type="checkbox" checked>
-                    <label for="">Category</label>
-                </div>
-                <div>
-                    <input id="" type="checkbox">
-                    <label for="">Category</label>
-                </div>
-                <div>
-                    <input id="" type="checkbox">
-                    <label for="">Category</label>
-                </div>
-                <div>
-                    <input id="" type="checkbox">
-                    <label for="">Category</label>
-                </div>
-                <div>
-                    <input id="" type="checkbox">
-                    <label for="">Category</label>
-                </div>
+            <div id="box-categorias" class="box-categorias">
             </div>
+
             <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn" type="submit">Search</button>
+                <input id="user-search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button id="search-btn" class="btn" type="submit">Search</button>
             </form>
         </section>
 
-        <section id="sectionCards-upcoming" class="section-cards row">
+        <p id="msg-error" class="msg-error hidden">Sorry, we haven't found any coincidence...Please try again!</p>
+
+        <section id="sectionCards-upcoming" class=" section-cards row">
         </section>
     </main>
 
@@ -75,6 +57,6 @@
         </div>
         <p>Cohort</p>
     </footer>
+    <script src="../js/script.js"></script>
 </body>
-<script src="../js/script.js"></script>
 </html>
