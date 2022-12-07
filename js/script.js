@@ -158,6 +158,17 @@ const objectEvents = {
 ]
 }
 
+/*
+const getDataEvents = async () => {
+    const promise = await fetch('https://amazing-events.herokuapp.com/api/events');
+    const events = await promise.json();
+
+    return events;
+}
+*/
+
+//const objectEvents = getDataEvents();
+
 const events = objectEvents.eventos; // array con todos los object events
 const searchBtn = document.getElementById('search-btn'); // button Search
 let inputSearch = document.getElementById('user-search'); // input Search
@@ -199,6 +210,7 @@ objectEvents.eventos.map((event) => {
 // ****************************************************************************************************************
 // CREACIÓN Y RENDERIZACIÓN DE CARDS
 let cards;
+let links;
 
 const renderCards = (array, section) => {
     const fragment = document.createDocumentFragment();
@@ -206,7 +218,8 @@ const renderCards = (array, section) => {
     array.map((event) => {
         const article = document.createElement("article");
         article.className = `section-cards_evento col-lg-3 col-md-5 col-sm-7`;
-        article.id = event.name.toLowerCase().replace(" ", "-");
+        const eventName = event.name.toLowerCase().replace(" ", "-");
+        article.id = eventName;
 
         article.innerHTML = `
                 <div>
@@ -346,7 +359,7 @@ checkboxs.forEach((checkbox) => {
             checkboxsChecked++;
 
             if (currentURL == "home.html") {
-                evts = events;
+                evts = eventsStats;
                 section = sectionHome;
             } else if (currentURL == "pastEvents.html") {
                 evts = pastEvents;
@@ -394,11 +407,3 @@ checkboxs.forEach((checkbox) => {
         }
     })
 })
-
-
-
-      
-// collectivities, jurassic, korean, comicon, electronic, 10k, 15k, just for kitchen, batman
-
-
-// parisian, halloween, avengers, schools, metallica
