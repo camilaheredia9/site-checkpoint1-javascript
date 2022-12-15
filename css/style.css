@@ -233,7 +233,7 @@ a{
     font-weight: 600;
 }
 
-.section-cards_evento div:last-of-type button{
+.section-cards_evento div:last-of-type a{
     border: 0.1rem solid var(--rosa);
     border-radius: 0.6rem;
     padding: 0.6rem;
@@ -289,42 +289,86 @@ main table{
 }
 
 th{
-    background-color: var(--nude);
+    background-color: var(--celeste);
+}
+
+td{
+    text-align: center;
 }
 
 tr, th, td{
-    border: 0.2rem solid var(--celeste);
+    border: 0.2rem solid var(--rosa);
     padding: 0.4rem;
 }
 
-table tr:nth-child(2) td,
-table tr:nth-child(5) td,
-table tr:nth-child(10) td{
-    font-style: italic;
+.field-name{
+    background-color: var(--nude);
+    text-align: start;
+}
+
+.event-name{
+    font-weight: 600;
 }
 
 /* main details */
-.section-details_articulo{
+.card-details{
     margin: 5rem auto;
     display: flex;
     justify-content: center;
-}
-
-.section-details_articulo img{
-    border-radius: 0.6rem;
-}
-
-.section-details_articulo div{
-    margin-left: 3rem;
     border: 0.2rem solid var(--rosa);
-    background-color: var(--crema);
-    padding: 1rem 2rem;
-    text-align: center;
-    border-radius: 0.6rem;
+    border-radius: 2rem;
 }
-
-.section-details_articulo p{
-    font-size: 1.8rem;
+.card-details_img{
+    width: 40%;
+}
+.card-details_img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+}
+.card-details_info{
+    width: 60%;
+    padding: 2rem;
+    text-align: center;
+}
+.card-details_info-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.6rem;
+}
+.card-details_info-header h2{
+    font-weight: 600;
+    color: var(--celeste);
+}
+.card-details_info-header span{
+    font-size: 1.4rem;
+    background-color: var(--rosa);
+    padding: 0.2rem 1rem;
+    border-radius: 1rem;
+}
+.card-details_info-description,
+.card-details_info-list{
+    font-size: 1.4rem;
+}
+.card-details_info-description{
+    margin-bottom: 1.6rem;
+}
+.card-details_info-list{
+    width: fit-content;
+    margin: auto;
+    list-style: none;
+}
+.card-details_info-list li{
+    text-align: start;
+    margin-bottom: 0.4rem;
+}
+.card-details_info-list li:last-of-type{
+    margin-bottom: 0;
+}
+.data-name{
+    font-weight: 600;
+    color: var(--color-footer);
 }
 
 /* footer */
@@ -356,21 +400,3 @@ footer p{
 .hidden{
     display: none;
 }
-
-
-/* 
-************* CONTINUAR LEYENDO...*************
-.section-cards_evento p{
-    margin: 1.6rem 0;
-}
-
-.section-cards_evento p button{
-    border: none;
-    font-style: italic;
-    background-color: transparent;
-    text-decoration: underline;
-}
-
-.textToShow{
-    display: none;
-}    
