@@ -389,6 +389,13 @@ footer{
     }
 }
 
+@media (min-width: 500px){
+    .footer-fixed-details{
+        position: fixed;
+        bottom: 0;
+    }
+}
+
 footer i{
     margin-right: 1rem;
 }

@@ -2,30 +2,19 @@
 const getDataEvents = async () => {
   try {
     const promise = await fetch("../js/data.json");
-    const eventos = await promise.json();
-    console.log("antes")
-    console.log(eventos)
-    miFuncion(eventos);
-    funcionStats(eventos)
-    // getPercentagesOfAttendanceAndCapacities(eventos)
-    //return eventos;
+    const response = await promise.json();
+    functionScript(response);
   } catch (error) {
     console.log("Ha ocurrido un error!");
   }
 }
+getDataEvents();
 
-getDataEvents()
+const pastEvents = [];
+const upcomingEvents = [];
 
-function miFuncion(eventss) {
-    //console.log(events)
-    //const events = eventss
-    //const events = getDataEvents().then(events => console.log(events.events))
-    console.log("hola");
-
-  //console.log(events);
-
-  const events = eventss.events; // array con todos los object events
-  console.log(events)
+function functionScript(data) {
+  const events = data.events;
 
   const searchBtn = document.getElementById("search-btn"); // button Search
   let inputSearch = document.getElementById("user-search"); // input Search
@@ -40,11 +29,10 @@ function miFuncion(eventss) {
 
   // ****************************************************************************************************************
   // COMPARACIÓN DE FECHAS
-  const pastEvents = [];
-  const upcomingEvents = [];
-  
-  console.log("fechas")
-  const currentDate = eventss.currentDate; // 2022-01-01
+//   const pastEvents = [];
+//   const upcomingEvents = [];
+
+  const currentDate = data.currentDate; // 2022-01-01
   const currentDateSplit = currentDate.split("-"); // ['2022', '01', '01']
   const currentDateTimestamp = new Date(
     currentDateSplit[0],
@@ -71,7 +59,6 @@ function miFuncion(eventss) {
   // ****************************************************************************************************************
   // CREACIÓN Y RENDERIZACIÓN DE CARDS
   let cards;
-  let links;
 
   const renderCards = (array, section) => {
     const fragment = document.createDocumentFragment();
@@ -267,5 +254,4 @@ function miFuncion(eventss) {
       }
     });
   });
-console.log("cierre miFuncion")
 }
